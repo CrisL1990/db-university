@@ -42,3 +42,8 @@ FROM `degrees`
 WHERE `level` = 'magistrale'
 
 
+DA QUANTI DIPARTIMENTI E' COMPOSTA L'UNIVERSITA'
+SELECT `name` AS `dipartimenti` 
+FROM `departments`
+
+
