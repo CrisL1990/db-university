@@ -8,11 +8,13 @@ WHERE `date_of_birth`BETWEEN '1990-01-01' AND '1990-12-31'
 SELEZIONARE TUTTI GLI STUDENTI NATI NEL 1990 VERSIONE 2
 SELECT * 
 FROM `students` 
-WHERE YEAR(`date_of_birth`) = 19901
+WHERE YEAR(`date_of_birth`) = 1990
 
 
-
-
+SELEZIONARE GLI STUDENTI MAGGIORI DI 30 ANNI
+SELECT * 
+FROM `students` 
+WHERE TIMESTAMPDIFF(YEAR, `date_of_birth`, CURRENT_DATE) >= 30
 
 
 
@@ -43,14 +45,14 @@ WHERE `level` = 'magistrale'
 
 
 DA QUANTI DIPARTIMENTI E' COMPOSTA L'UNIVERSITA'
-SELECT `name` AS `dipartimenti` 
+SELECT COUNT(*) AS 'Dipartimenti' 
 FROM `departments`
 
 
 QUANTI INSEGNANTI NON HANNO IL NUMERO DI TELEFONO?
 SELECT * 
 FROM `teachers` 
-WHERE`phone`IS null
+WHERE `phone` IS null
 
 
 
