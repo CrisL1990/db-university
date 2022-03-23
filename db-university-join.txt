@@ -4,3 +4,11 @@ FROM `degrees`
 JOIN `students`
 ON `degrees`.`id` = `students`.`degree_id`
 WHERE `degrees`.`name` = 'Corso di Laurea in Economia'
+
+
+SELEZIONARE TUTTI I CORSI DI LAUREA DEL DIPARTIMENTO DI NEUROSCIENZE
+SELECT `departments`.*, `degrees`.*
+FROM `departments`
+JOIN `degrees`
+ON `degrees`.`department_id` = `departments`.`id`
+WHERE `departments`.`name`= 'Dipartimento di Neuroscienze'
