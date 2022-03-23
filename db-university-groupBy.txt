@@ -1,0 +1,21 @@
+CONTARE QUANTI ISCRITTI CI SONO STATI OHNI ANNO
+SELECT COUNT(`id`) AS 'numero_studenti', YEAR(`enrolment_date`) AS 'anno_iscrizione'
+FROM `students` 
+GROUP BY YEAR(`enrolment_date`)
+
+
+CONTARE GLI INSEGNANTI CHE HANNO L'UFFICIO NELLO STESSO EDIFICIO
+SELECT COUNT(*) AS 'numero_insegnanti', `office_address` AS 'numero_ufficio' 
+FROM `teachers`
+GROUP BY (`office_address`);
+
+
+CALCOLARE LA MEDIA DI OGNI APPELLO D'ESAME
+SELECT AVG(`vote`) AS 'media_voti', `exam_id` AS 'id_esame' 
+FROM `exam_student`
+GROUP BY (`exam_id`);
+
+CONTARE QUANTI CORSI DI LAUREA CI SONO PER OGNI DIPARTIMENTO
+SELECT COUNT(`id`) AS 'numero_corsi', `department_id` AS 'id_dipartimento'
+FROM `degrees`
+GROUP BY (`department_id`)
